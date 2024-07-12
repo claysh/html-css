@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
-<body>
+
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu Site</h1>
         <span class="material-icons" id="burguer" onclick="clickMenu()">menu</span>
@@ -25,23 +28,46 @@
         <article>
             <h2>Testando Media Queries</h2>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et a veniam quis inventore porro doloribus aliquid neque quam amet, nesciunt libero ipsam voluptates, aperiam magnam fuga distinctio non optio! Illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil consequatur autem, cum accusamus id cupiditate eveniet quia, suscipit velit libero delectus animi unde incidunt ipsum. Excepturi rem non quia voluptate.</p>
-            
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt perspiciatis, atque repellendus sed a error cupiditate quo, similique modi quos sapiente ipsam distinctio? Saepe, numquam quae iusto unde porro ipsa! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, dolorum debitis quos quis aut adipisci odio eum harum suscipit accusantium, iusto, fugiat reiciendis? Repellat porro explicabo a? Dolorem, quasi expedita.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et a veniam quis inventore porro doloribus
+                aliquid neque quam amet, nesciunt libero ipsam voluptates, aperiam magnam fuga distinctio non optio!
+                Illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil consequatur autem, cum accusamus id
+                cupiditate eveniet quia, suscipit velit libero delectus animi unde incidunt ipsum. Excepturi rem non
+                quia voluptate.</p>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sapiente mollitia. Dolore esse in repudiandae, sequi eligendi ducimus minima pariatur consequuntur vel. Amet veniam a numquam harum dolor? Magnam, sit? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum quo in vero fuga nobis porro alias saepe commodi quas dolor? Deserunt porro distinctio veniam eum nostrum incidunt quia nam illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro perferendis repellendus blanditiis. Corporis facilis nisi fuga amet ratione tenetur delectus ut enim! Tempore mollitia voluptatibus nemo, impedit saepe laudantium ad.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt perspiciatis, atque repellendus sed a
+                error cupiditate quo, similique modi quos sapiente ipsam distinctio? Saepe, numquam quae iusto unde
+                porro ipsa! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, dolorum debitis quos quis
+                aut adipisci odio eum harum suscipit accusantium, iusto, fugiat reiciendis? Repellat porro explicabo a?
+                Dolorem, quasi expedita.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sapiente mollitia. Dolore esse in
+                repudiandae, sequi eligendi ducimus minima pariatur consequuntur vel. Amet veniam a numquam harum dolor?
+                Magnam, sit? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum quo in vero fuga nobis porro
+                alias saepe commodi quas dolor? Deserunt porro distinctio veniam eum nostrum incidunt quia nam illo!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro perferendis repellendus blanditiis.
+                Corporis facilis nisi fuga amet ratione tenetur delectus ut enim! Tempore mollitia voluptatibus nemo,
+                impedit saepe laudantium ad.</p>
         </article>
     </main>
-    <script>        
-        function clickMenu() {        
-            let menu = document.getElementById('itens');
-            if (menu.style.display == 'none') {
-                menu.style.display = 'block';
+    <script>
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block';
             }
             else {
-                menu.style.display = 'none';
+                itens.style.display = 'none';
+            }
+        }
+
+        function clickMenu() {
+            if (itens.style.display == 'none') {
+                itens.style.display = 'block';
+            }
+            else {
+                itens.style.display = 'none';
             }
         }
     </script>
 </body>
+
 </html>
